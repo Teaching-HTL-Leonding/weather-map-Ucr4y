@@ -1,0 +1,1 @@
+GET https://api.geoapify.com/v1/geocode/search?text=Leonding,%20Austria&format=json&apiKey=7a3839bb1c554274a2e3527db778f9ad
