@@ -1,4 +1,6 @@
 <label>Location: <input type="text" [(ngModel)]="location"></label>
 
 <button (click)="loadGeoData()">Load</button>
-{{geoData | json}}
+{{weatherData| json}}
+<img *ngIf="weatherData?.weather?.at(0)?.icon"
+  src="http://openweathermap.org/img/wn/{{weatherData?.weather?.at(0)?.icon}}@2x.png">
