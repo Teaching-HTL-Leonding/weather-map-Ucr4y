@@ -1,6 +1,15 @@
 <label>Location: <input type="text" [(ngModel)]="location"></label>
 
-<button (click)="loadGeoData()">Load</button>
+<button (click)="loadGeoData(location)">Load</button>
 {{weatherData| json}}
 <img *ngIf="weatherData?.weather?.at(0)?.icon"
   src="http://openweathermap.org/img/wn/{{weatherData?.weather?.at(0)?.icon}}@2x.png">
+
+<ul *ngIf="airtableData?.records">
+  <li *ngFor="let element of airtableData?.records">
+    {{element.fields.city}}
+    {{element.fields.description}}
+    {{element.fields.time}}
+    {{isOlderThan30Mins(element.fields.time)}}
+  </li>
+</ul>

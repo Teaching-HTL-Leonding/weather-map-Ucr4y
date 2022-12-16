@@ -1,5 +1,0 @@
-GET https://api.geoapify.com/v1/geocode/search?text=sdfklsdfjosdjif&format=json&apiKey=7a3839bb1c554274a2e3527db778f9ad
-
-###
-
-GET https://api.openweathermap.org/data/2.5/weather?lat=48.2793314&lon=14.2487457&lang=de&units=metric&appid=8ff4dc4f6c29f630e4461e41def885bd

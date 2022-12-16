@@ -33,7 +33,7 @@ export class WeatherDataService {
 
   public loadGeoData(location: string): Observable<Results> {
     return this.http.get<Results>(
-      `https://api.geoapify.com/v1/geocode/search?text=${location}&format=json&apiKey=7a3839bb1c554274a2e3527db778f9ad`
+      `https://api.geoapify.com/v1/geocode/search?text=${location}&format=json&apiKey=API-TOKEN`
     );
   }
 
@@ -42,7 +42,7 @@ export class WeatherDataService {
     lat: number
   ): Observable<WeatherResponse> {
     return this.http.get<WeatherResponse>(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=de&units=metric&appid=8ff4dc4f6c29f630e4461e41def885bd`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=de&units=metric&appid=API-TOKEN`
     );
   }
 }
