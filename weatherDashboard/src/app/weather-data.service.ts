@@ -42,7 +42,8 @@ export class WeatherDataService {
     lat: number
   ): Observable<WeatherResponse> {
     return this.http.get<WeatherResponse>(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=de&units=metric&appid=API-TOKEN`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=de&units=metric&appid=API-TOKEN
+      `
     );
   }
 }
